@@ -32,7 +32,7 @@ export function* signIn({ payload }) {
   } catch (err) {
     Alert.alert(
       'Falha na indentificação',
-      'Falha na notificação, verifique seis dados'
+      'Falha na notificação, verifique seus dados'
     );
     yield put(signFailure());
   }
@@ -48,10 +48,7 @@ export function* signUp({ payload }) {
     });
     // history.push('/');
   } catch (err) {
-    Alert.alert(
-      'Falha De Cadastro',
-      'Falha no cadastro, verifique seuas dados'
-    );
+    Alert.alert('Falha De Cadastro', 'Falha no cadastro, verifique seus dados');
     yield put(signFailure());
   }
 }
